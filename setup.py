@@ -1,5 +1,5 @@
 """
-jupyterlab-tailwind-theme setup
+jupyterlab-simpledark    setup
 """
 import json
 from pathlib import Path
@@ -16,7 +16,7 @@ import setuptools
 HERE = Path(__file__).parent.resolve()
 
 # The name of the project
-name = "jupyterlab-tailwind-theme"
+name = "jupyterlab-simpledark"
 
 lab_path = (HERE / name / "labextension")
 
@@ -29,7 +29,7 @@ package_data_spec = {
     name: ["*"],
 }
 
-labext_name = "jupyterlab-tailwind-theme"
+labext_name = "jupyterlab-simpledark"
 
 data_files_spec = [
     ("share/jupyter/labextensions/%s" % labext_name, str(lab_path), "**"),
