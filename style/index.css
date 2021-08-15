@@ -1,1 +1,318 @@
-@import url('base.css');
+/*-----------------------------------------------------------------------------
+| Copyright (c) Jupyter Development Team.
+| Distributed under the terms of the Modified BSD License.
+|----------------------------------------------------------------------------*/
+
+@import './variables.css';
+@import './urls.css';
+
+/* Set the default typography for monospace elements */
+tt,
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--jp-code-font-family);
+  font-size: var(--jp-code-font-size);
+  line-height: var(--jp-code-line-height);
+}
+
+
+/* Background color */
+body {
+  background: var(--simpledark-background-color);
+}
+
+
+/* -- Top panel/menu bar -- */
+#jp-top-panel,
+#jp-menu-panel,
+.p-MenuBar {
+  background: var(--simpledark-menu-color);
+  color: white;
+}
+
+.p-MenuBar.p-mod-active .p-MenuBar-item.p-mod-active,
+.p-MenuBar-item:hover {
+  background: var(--simpledark-menu-item-hover-color);
+  box-shadow: none;
+}
+
+.p-Menu {
+  margin-top: 2px;
+}
+
+#jp-title-panel-title h1 {
+  /* Header title in simple mode */
+  color: var(--simpledark-base-font-color);
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.lm-Menu-item[data-type='separator']>div::after {
+  /* Separator color */
+  border-top: var(--jp-border-width) solid var(--jp-border-color2);
+}
+
+/* -- File tabs -- */
+/* Remove blue background */
+.p-DockPanel-tabBar .p-TabBar-tab.jp-mod-current::before {
+  background: none;
+}
+
+/* Shrink tab width to content (remove space) */
+.p-DockPanel-tabBar .p-TabBar-tab {
+  flex: none;
+  color: var(--simpledark-grey-500);
+}
+
+
+/* -- File toolbar -- */
+/* Remove file toolbar shadow */
+.jp-Toolbar {
+  box-shadow: none;
+}
+
+/* File menu button hover */
+button.jp-Button.bp3-button.bp3-minimal:hover {
+  background: var(--simpledark-layout-color2);
+}
+
+
+/* -- Extension toolbar  */
+/* Remove lines between extensions */
+.jp-extensionmanager-entry {
+  border-bottom: unset;
+}
+
+
+/* -- Status bar (bottom) --  */
+/* Status bar background*/
+.f17wptjy {
+  background: var(--simpledark-grey-700);
+}
+
+/* Status bar font color */
+.f1235lqo,
+.jp-switch {
+  color: white;
+  border-radius: initial;
+}
+
+.fwgmxe9:hover,
+.jp-switch:hover {
+  background-color: var(--jp-inverse-layout-color4);
+}
+
+.jp-switch[aria-checked='true'] .jp-switch-track {
+  /* Simple switch: On */
+  background-color: var(--jp-info-color1);
+}
+
+.jp-switch-track {
+  /* Simple switch: Off */
+  background-color: var(--simpledark-grey-900);
+}
+
+.jp-switch-track::before {
+  /* Simple switch: Color */
+  background-color: white;
+}
+
+
+/* -- Sidebar -- */
+/* Sidebar icon hover effect */
+.jp-SideBar .p-TabBar-tab:hover:not(.p-mod-current),
+.jp-SideBar .p-TabBar-tab:hover:not(.p-mod-current) path {
+  fill: var(--simpledark-layout-color3);
+  background: var(--simpledark-layout-color2);
+}
+
+/* Selected sidebar icon color */
+.jp-SideBar .p-TabBar-tab.p-mod-current path {
+  fill: var(--simpledark-layout-color3);
+}
+
+/* Main screen icon */
+.jp-icon-accent2[fill] {
+  fill: var(--simpledark-inverse-layout-color3);
+}
+
+
+/* -- Editor -- */
+/* Change cursor color */
+.cm-fat-cursor .CodeMirror-cursor,
+.cm-animate-fat-cursor {
+  background: var(--jp-brand-color2);
+  animation: none;
+}
+
+/* Prevent cursor blinking */
+.CodeMirror-focused .CodeMirror-cursors {
+  visibility: visible !important;
+}
+
+/* Input cell area */
+.jp-InputArea-editor {
+  border-radius: var(--jp-border-radius);
+  padding: calc(var(--jp-code-padding) / 2);
+}
+
+/* Search highlight - make 1px higher to cover grey background */
+.cm-searching {
+  padding: 2px 2px;
+  margin: -2px -2px;
+  position: relative;
+  /* Set position since with default (position: static) z-index has no effect */
+  z-index: -10;
+  /* Position highlighting behind text */
+}
+
+/* Max-width for main content/cell blocks */
+.jp-Notebook .jp-Cell {
+  max-width: var(--max-cell-width);
+  margin: auto;
+}
+
+/* Input/Output number indicator */
+.jp-InputPrompt,
+.jp-OutputPrompt {
+  font-size: 0.8em;
+  margin-top: 4px;
+}
+
+/* Set code line number background and remove border line */
+.CodeMirror-gutters,
+.cm-s-jupyter .CodeMirror-activeline-background,
+.cm-s-jupyter .CodeMirror-gutter {
+  border: none;
+  background-color: var(--simpledark-layout-color1);
+}
+
+/* Error output print */
+.jp-RenderedText[data-mime-type="application/vnd.jupyter.stderr"] {
+  padding: var(--jp-code-padding);
+}
+
+.jp-RenderedText pre .ansi-green-intense-fg {
+  color: var(--mirror-editor-string-color);
+  /* Error window description*/
+}
+
+.jp-RenderedText pre .ansi-red-intense-fg {
+  color: var(--mirror-editor-string-color);
+  /* Error window error raised*/
+}
+
+.jp-RenderedText pre .ansi-yellow-intense-fg {
+  color: var(--jp-editor-cursor-color);
+  /* Error window line of failure */
+}
+
+/* Search box */
+.jp-DocumentSearch-overlay {
+  background-color: var(--simpledark-layout-color2);
+  box-shadow: var(--jp-elevation-z4);
+  padding: var(--jp-cell-padding);
+}
+
+.jp-DocumentSearch-input-wrapper,
+.jp-DocumentSearch-replace-entry {
+  border-radius: var(--jp-border-radius);
+  padding: 2px;
+}
+
+/* Table style */
+/* .dataframe are typically pandas tables in cells while .jp-RenderedHTMLCommon are Markdown tables */
+.dataframe,
+.jp-RenderedHTMLCommon table {
+  background: var(--simpledark-layout-color1);
+  border-radius: var(--jp-border-radius);
+  overflow: hidden;
+  margin-top: var(--jp-code-padding);
+}
+
+.dataframe thead,
+.jp-RenderedHTMLCommon thead {
+  /* Table header color */
+  background-color: var(--simpledark-layout-color2);
+}
+
+.dataframe thead th,
+.dataframe tbody td {
+  text-align: right;
+}
+
+.dataframe td {
+  /* Prevent that table body cells wrap the content */
+  white-space: nowrap;
+}
+
+.dataframe tr,
+.jp-RenderedHTMLCommon tr {
+  /* Light-grey row separation line */
+  border-bottom: 1px var(--simpledark-inverse-layout-color2) solid;
+}
+
+.dataframe tbody tr:nth-child(2n),
+.jp-RenderedHTMLCommon tbody tr:nth-child(2n) {
+  /* Odd row number - do not color differently */
+  background: unset;
+}
+
+.dataframe tbody tr:hover,
+.jp-RenderedHTMLCommon tbody tr:hover {
+  /* Odd row number - use same focus color when hovering */
+  background: rgba(66, 165, 245, 0.2);
+}
+
+.dataframe>tbody>tr>th {
+  /* Index column(s) */
+  color: var(--simpledark-layout-color4);
+  background-color: var(--simpledark-layout-color2);
+  vertical-align: middle !important;
+  text-align: center;
+}
+
+.reveal table th,
+.reveal table td {
+  /*Ignore table border setting in RISE presentation */
+  border-bottom: none;
+}
+
+/* Plots */
+/* Matplotlib */
+.jp-needs-light-background {
+  background-color: white !important;
+}
+
+/* Command palette */
+.p-CommandPalette-item.p-mod-active {
+  background: var(--simpledark-inverse-layout-color2);
+}
+
+/* Scrollbar */
+div,
+ul {
+  /* Currently only supported in Firefox */
+  scrollbar-color: var(--simpledark-scrollbar-thumb-color) var(--simpledark-scrollbar-track-color);
+}
+
+div::-webkit-scrollbar,
+ul::-webkit-scrollbar {
+  background-color: var(--simpledark-scrollbar-track-color);
+  border-radius: var(--jp-border-radius);
+  width: 12px;
+}
+
+div::-webkit-scrollbar-track,
+ul::-webkit-scrollbar-track {
+  background-color: var(--simpledark-scrollbar-track-color);
+  border-radius: var(--jp-border-radius);
+}
+
+div::-webkit-scrollbar-thumb,
+ul::-webkit-scrollbar-thumb {
+  background-color: var(--simpledark-scrollbar-thumb-color);
+  border-radius: var(--jp-border-radius);
+}
