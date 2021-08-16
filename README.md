@@ -10,7 +10,7 @@ Simpledark original          |  Simpledark fresh  (new :tada:)
 
 ## :wrench: Configurations
 
-What about a nostalgic Jupyter Notebook centralized layout?
+What about a nostalgic Jupyter Notebook layout? Set a cell max-width.
 
 ```settings``` -> ```advanced settings editor``` -> ```theme - Simpledark```
 
@@ -28,7 +28,7 @@ What about a nostalgic Jupyter Notebook centralized layout?
 
 ## :cd: Install
 
-The source code is currently hosted on GitHub at: https://github.com/ericmiguel/jupyterlab-simpledark
+The source code is currently hosted on GitHub at: https://github.com/ericmiguel/jupyterlab-simpledark.
 
 Installers for the latest released version are available at the [PyPI](https://pypi.org/project/jupyterlab-simpledark).
 
@@ -67,7 +67,7 @@ npm run build
 jupyter lab build
 ```
 
-See also JupyterLab's documentation [Development workflow for source extensions](https://jupyterlab.readthedocs.io/en/stable/extension/extension_dev.html#development-workflow-for-source-extensions)
+See also JupyterLab's documentation [Development workflow for source extensions](https://jupyterlab.readthedocs.io/en/stable/extension/extension_dev.html#development-workflow-for-source-extensions).
 
 ## :construction_worker: Maintainer
 
