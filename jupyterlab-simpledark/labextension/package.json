@@ -62,6 +62,10 @@
   "jupyterlab": {
     "extension": true,
     "themePath": "style/index.css",
-    "outputDir": "jupyterlab-simpledark/labextension"
+    "outputDir": "jupyterlab-simpledark/labextension",
+    "_build": {
+      "load": "static/remoteEntry.909bcafe0628797a4b32.js",
+      "extension": "./extension"
+    }
   }
 }
