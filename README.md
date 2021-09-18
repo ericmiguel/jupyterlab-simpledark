@@ -6,9 +6,9 @@ A (growing) dark theme collection for [JupyterLab](https://jupyter.org/).
 
 Simpledark original          |  Simpledark fresh  (new :tada:)
 :-------------------------:|:-------------------------:
-![original](examples/original1.png)  |  ![fresh](examples/fresh1.png)
+![original]([examples/original1.png](https://github.com/ericmiguel/jupyterlab-simpledark/blob/v1.0.0/examples/original1.png))  |  ![fresh]([examples/fresh1.png](https://github.com/ericmiguel/jupyterlab-simpledark/blob/v1.0.0/examples/fresh1.png))
 
-## :wrench: Configurations
+## 🔧 Configurations
 
 What about a nostalgic Jupyter Notebook layout? Set a cell max-width.
 
@@ -22,11 +22,11 @@ What about a nostalgic Jupyter Notebook layout? Set a cell max-width.
 
 ![original](examples/original2.png)
 
-## :warning: Requirements
+## ⚠️ Requirements
 
 * JupyterLab >= 3.0
 
-## :cd: Install
+## 💿 Install
 
 The source code is currently hosted on GitHub at: https://github.com/ericmiguel/jupyterlab-simpledark.
 
@@ -42,7 +42,7 @@ To uninstall, run:
 pip uninstall jupyterlab-simpledark
 ```
 
-## :hammer: Contributing
+## 🔨 Contributing
 
 ### Development install
 
@@ -69,10 +69,10 @@ jupyter lab build
 
 See also JupyterLab's documentation [Development workflow for source extensions](https://jupyterlab.readthedocs.io/en/stable/extension/extension_dev.html#development-workflow-for-source-extensions).
 
-## :construction_worker: Maintainer
+## 👷 Maintainer
 
 [![Eric Miguel](https://avatars1.githubusercontent.com/u/12076399?s=70)](https://github.com/ericmiguel)
 
-## :scroll: License
+## 📜 License
 
 [MIT License](./LICENSE)
