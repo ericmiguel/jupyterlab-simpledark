@@ -1,7 +1,7 @@
 {
   "name": "jupyterlab-simpledark",
-  "version": "0.5.1",
-  "description": "A simple and dark theme for Jupyter Lab",
+  "version": "1.0.1",
+  "description": "A (growing) dark theme collection for JupyterLab.",
   "keywords": [
     "jupyter",
     "jupyterlab",
@@ -12,14 +12,13 @@
     "url": "https://github.com/ericmiguel/jupyterlab-simpledark/issues"
   },
   "license": "BSD-3-Clause",
-  "author": "ericmiguel",
+  "author": "Eric Miguel",
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
-    "style/**/*.{css,.js,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "style": "style/index.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/ericmiguel/jupyterlab-simpledark.git"
@@ -43,30 +42,26 @@
     "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
-    "@jupyterlab/application": "^3.0.4",
-    "@jupyterlab/apputils": "^3.0.3",
-    "@jupyterlab/translation": "^3.0.3"
+    "@jupyterlab/application": "^3.0.0"
   },
   "devDependencies": {
-    "@jupyterlab/builder": "^3.0.2",
-    "@typescript-eslint/eslint-plugin": "^4.15.0",
-    "@typescript-eslint/parser": "^4.15.0",
-    "eslint": "^7.19.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-prettier": "^3.3.1",
+    "@jupyterlab/builder": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.2.1",
+    "prettier": "^1.19.0",
     "rimraf": "^3.0.2",
-    "typescript": "~4.1.4"
+    "typescript": "~4.0.3"
   },
   "sideEffects": [
-    "style/*.css",
-    "style/index.js"
+    "style/*.css"
   ],
-  "styleModule": "style/index.js",
   "jupyterlab": {
     "extension": true,
-    "outputDir": "jupyterlab-simpledark/labextension",
-    "themePath": "style/index.css"
+    "themePath": "style/index.css",
+    "outputDir": "jupyterlab-simpledark/labextension"
   }
 }

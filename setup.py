@@ -6,14 +6,14 @@ import os
 
 from jupyter_packaging import (
     create_cmdclass, install_npm, ensure_targets,
-    combine_commands, skip_if_exists
+    combine_commands, skip_if_exists,
 )
 import setuptools
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 
 # The name of the project
-name="jupyterlab-simpledark"
+name = "jupyterlab-simpledark"
 
 # Get our version
 with open(os.path.join(HERE, 'package.json')) as f:
@@ -39,7 +39,8 @@ data_files_spec = [
     ("share/jupyter/labextensions/%s" % labext_name, HERE, "install.json"),
 ]
 
-cmdclass = create_cmdclass("jsdeps",
+cmdclass = create_cmdclass(
+    "jsdeps",
     package_data_spec=package_data_spec,
     data_files_spec=data_files_spec
 )
@@ -49,11 +50,12 @@ js_command = combine_commands(
     ensure_targets(jstargets),
 )
 
-is_repo = os.path.exists(os.path.join(HERE, ".git"))
+is_repo = os.path.exists(os.path.join(HERE, '.git'))
 if is_repo:
-    cmdclass["jsdeps"] = js_command
+    cmdclass['jsdeps'] = js_command
 else:
-    cmdclass["jsdeps"] = skip_if_exists(jstargets, js_command)
+    cmdclass['jsdeps'] = skip_if_exists(jstargets, js_command)
+
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -61,22 +63,22 @@ with open("README.md", "r") as fh:
 setup_args = dict(
     name=name,
     version=version,
-    url="https://github.com/ericmiguel/jupyterlab-simpledark",
-    author="ericmiguel",
-    description="A simple and dark theme for Jupyter Lab",
-    long_description= long_description,
+    url="https://github.com/my_name/jupyterlab-simpledark",
+    author="Eric Miguel",
+    description="A JupyterLab extension.",
+    long_description=long_description,
     long_description_content_type="text/markdown",
-    cmdclass= cmdclass,
+    cmdclass=cmdclass,
     packages=setuptools.find_packages(),
     install_requires=[
-        "jupyterlab>=3.0.0rc13,==3.*",
+        "jupyterlab>=3.0.0,==3.*",
     ],
     zip_safe=False,
     include_package_data=True,
     python_requires=">=3.6",
     license="BSD-3-Clause",
     platforms="Linux, Mac OS X, Windows",
-    keywords=["Jupyter", "JupyterLab", "JupyterLab3"],
+    keywords=["Jupyter", "JupyterLab"],
     classifiers=[
         "License :: OSI Approved :: BSD License",
         "Programming Language :: Python",
@@ -85,6 +87,10 @@ setup_args = dict(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Framework :: Jupyter",
+        "Framework :: Jupyter :: JupyterLab :: 3",
+        "Framework :: Jupyter :: JupyterLab :: Extensions",
+        "Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt",
+        "Framework :: Jupyter :: JupyterLab :: Extensions :: Themes",
     ],
 )
 
