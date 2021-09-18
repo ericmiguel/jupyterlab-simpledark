@@ -4,9 +4,9 @@
 
 A (growing) dark theme collection for [JupyterLab](https://jupyter.org/).
 
-Simpledark original          |  Simpledark fresh  (new :tada:)
+Simpledark original          |  Simpledark fresh  (new 🎉)
 :-------------------------:|:-------------------------:
-![original]([examples/original1.png](https://github.com/ericmiguel/jupyterlab-simpledark/blob/v1.0.0/examples/original1.png))  |  ![fresh]([examples/fresh1.png](https://github.com/ericmiguel/jupyterlab-simpledark/blob/v1.0.0/examples/fresh1.png))
+![original](https://raw.githubusercontent.com/ericmiguel/jupyterlab-simpledark/v1.0.0/examples/original1.png)  |  ![fresh](https://raw.githubusercontent.com/ericmiguel/jupyterlab-simpledark/v1.0.0/examples/fresh1.png)
 
 ## 🔧 Configurations
 
@@ -20,7 +20,7 @@ What about a nostalgic Jupyter Notebook layout? Set a cell max-width.
 }
 ```
 
-![original](examples/original2.png)
+![original](https://raw.githubusercontent.com/ericmiguel/jupyterlab-simpledark/v1.0.0/examples/original2.png)
 
 ## ⚠️ Requirements
 
