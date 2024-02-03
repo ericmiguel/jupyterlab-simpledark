@@ -1,11 +1,6 @@
-/*-----------------------------------------------------------------------------
-| Copyright (c) Jupyter Development Team.
-| Distributed under the terms of the Modified BSD License.
-|----------------------------------------------------------------------------*/
-
 :root {
   /* Images
-
+  
   These images are included with JupyterLab for showing the Project Jupyter logo
   */
   --jp-image-jupyter: url('images/jupyter.svg');
@@ -18,9 +13,9 @@
   --jp-image-caretdown: url('images/caretdown.png');
 
   /* Icons
-
-  These icons are used throughout JupyterLab.
-  */
+  
+    These icons are used throughout JupyterLab.
+    */
 
   /* The caret used for select dropdown styling. */
 

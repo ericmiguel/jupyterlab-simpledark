@@ -1,8 +1,3 @@
-/*-----------------------------------------------------------------------------
-| Copyright (c) Jupyter Development Team.
-| Distributed under the terms of the Modified BSD License.
-|----------------------------------------------------------------------------*/
-
 /*
 The following CSS variables define the main, public API for styling JupyterLab.
 These variables should be used by all plugins wherever possible. In other
@@ -34,111 +29,100 @@ all of MD as it is not optimized for dense, information rich UIs.
   --simpledark-black-600: #1d1d1d;
   --simpledark-black-700: #1a1a1a;
   --simpledark-black-800: #181818;
-  --simpledark-black-900: #111111;
-
-  --simpledark-grey-100: #F7FAFC;
-  --simpledark-grey-200: #EDF2F7;
-  --simpledark-grey-300: #E2E8F0;
-  --simpledark-grey-400: #CBD5E0;
-  --simpledark-grey-500: #A0AEC0;
+  --simpledark-black-900: #111;
+  --simpledark-grey-100: #f7fafc;
+  --simpledark-grey-200: #edf2f7;
+  --simpledark-grey-300: #e2e8f0;
+  --simpledark-grey-400: #cbd5e0;
+  --simpledark-grey-500: #a0aec0;
   --simpledark-grey-600: #718096;
-  --simpledark-grey-700: #4A5568;
-  --simpledark-grey-800: #2D3748;
-  --simpledark-grey-900: #1A202C;
-  --simpledark-grey-950: #11151D;
-
-  --simpledark-blue-100: #EBF8FF;
-  --simpledark-blue-200: #BEE3F8;
-  --simpledark-blue-300: #90CDF4;
-  --simpledark-blue-400: #63B3ED;
-  --simpledark-blue-500: #4299E1;
-  --simpledark-blue-600: #3182CE;
-  --simpledark-blue-700: #2B6CB0;
-  --simpledark-blue-800: #2C5282;
-  --simpledark-blue-900: #2A4365;
-
-  --simpledark-indigo-100: #EBF4FF;
-  --simpledark-indigo-200: #C3DAFE;
-  --simpledark-indigo-300: #A3BFFA;
+  --simpledark-grey-700: #4a5568;
+  --simpledark-grey-800: #2d3748;
+  --simpledark-grey-900: #1a202c;
+  --simpledark-grey-950: #11151d;
+  --simpledark-blue-100: #ebf8ff;
+  --simpledark-blue-200: #bee3f8;
+  --simpledark-blue-300: #90cdf4;
+  --simpledark-blue-400: #63b3ed;
+  --simpledark-blue-500: #4299e1;
+  --simpledark-blue-600: #3182ce;
+  --simpledark-blue-700: #2b6cb0;
+  --simpledark-blue-800: #2c5282;
+  --simpledark-blue-900: #2a4365;
+  --simpledark-indigo-100: #ebf4ff;
+  --simpledark-indigo-200: #c3dafe;
+  --simpledark-indigo-300: #a3bffa;
   --simpledark-indigo-400: #8da2e2;
   --simpledark-indigo-500: #7b8ad1;
-  --simpledark-indigo-600: #5A67D8;
+  --simpledark-indigo-600: #5a67d8;
   --simpledark-indigo-700: #5559a5;
   --simpledark-indigo-800: #484677;
   --simpledark-indigo-900: #363158;
   --simpledark-indigo-1000: #322e4b;
   --simpledark-indigo-1100: #211e36;
   --simpledark-indigo-1200: #1e192b;
-
-  --simpledark-purple-100: #FAF5FF;
-  --simpledark-purple-200: #E9D8FD;
-  --simpledark-purple-300: #D6BCFA;
-  --simpledark-purple-400: #B794F4;
-  --simpledark-purple-500: #9F7AEA;
-  --simpledark-purple-600: #805AD5;
-  --simpledark-purple-700: #6B46C1;
-  --simpledark-purple-800: #553C9A;
-  --simpledark-purple-900: #44337A;
-
-  --simpledark-green-100: #F0FFF4;
-  --simpledark-green-200: #C6F6D5;
-  --simpledark-green-300: #9AE6B4;
-  --simpledark-green-400: #68D391;
-  --simpledark-green-500: #48BB78;
-  --simpledark-green-600: #38A169;
-  --simpledark-green-700: #2F855A;
+  --simpledark-purple-100: #faf5ff;
+  --simpledark-purple-200: #e9d8fd;
+  --simpledark-purple-300: #d6bcfa;
+  --simpledark-purple-400: #b794f4;
+  --simpledark-purple-500: #9f7aea;
+  --simpledark-purple-600: #805ad5;
+  --simpledark-purple-700: #6b46c1;
+  --simpledark-purple-800: #553c9a;
+  --simpledark-purple-900: #44337a;
+  --simpledark-green-100: #f0fff4;
+  --simpledark-green-200: #c6f6d5;
+  --simpledark-green-300: #9ae6b4;
+  --simpledark-green-400: #68d391;
+  --simpledark-green-500: #48bb78;
+  --simpledark-green-600: #38a169;
+  --simpledark-green-700: #2f855a;
   --simpledark-green-800: #276749;
-  --simpledark-green-900: #22543D;
-
-  --simpledark-orange-100: #FFFAF0;
-  --simpledark-orange-200: #FEEBC8;
-  --simpledark-orange-300: #FBD38D;
-  --simpledark-orange-400: #F6AD55;
-  --simpledark-orange-500: #ED8936;
-  --simpledark-orange-600: #DD6B20;
-  --simpledark-orange-700: #C05621;
-  --simpledark-orange-800: #9C4221;
-  --simpledark-orange-900: #7B341E;
-
-  --simpledark-yellow-100: #FFFFF0;
-  --simpledark-yellow-200: #FEFCBF;
-  --simpledark-yellow-300: #FAF089;
-  --simpledark-yellow-400: #F6E05E;
-  --simpledark-yellow-500: #ECC94B;
-  --simpledark-yellow-600: #D69E2E;
-  --simpledark-yellow-700: #B7791F;
-  --simpledark-yellow-800: #975A16;
+  --simpledark-green-900: #22543d;
+  --simpledark-orange-100: #fffaf0;
+  --simpledark-orange-200: #feebc8;
+  --simpledark-orange-300: #fbd38d;
+  --simpledark-orange-400: #f6ad55;
+  --simpledark-orange-500: #ed8936;
+  --simpledark-orange-600: #dd6b20;
+  --simpledark-orange-700: #c05621;
+  --simpledark-orange-800: #9c4221;
+  --simpledark-orange-900: #7b341e;
+  --simpledark-yellow-100: #fffff0;
+  --simpledark-yellow-200: #fefcbf;
+  --simpledark-yellow-300: #faf089;
+  --simpledark-yellow-400: #f6e05e;
+  --simpledark-yellow-500: #ecc94b;
+  --simpledark-yellow-600: #d69e2e;
+  --simpledark-yellow-700: #b7791f;
+  --simpledark-yellow-800: #975a16;
   --simpledark-yellow-900: #744210;
-
-  --simpledark-red-100: #FFF5F5;
-  --simpledark-red-200: #FED7D7;
-  --simpledark-red-300: #FEB2B2;
-  --simpledark-red-400: #FC8181;
-  --simpledark-red-500: #F56565;
-  --simpledark-red-600: #E53E3E;
-  --simpledark-red-700: #C53030;
-  --simpledark-red-800: #9B2C2C;
-  --simpledark-red-900: #742A2A;
-
+  --simpledark-red-100: #fff5f5;
+  --simpledark-red-200: #fed7d7;
+  --simpledark-red-300: #feb2b2;
+  --simpledark-red-400: #fc8181;
+  --simpledark-red-500: #f56565;
+  --simpledark-red-600: #e53e3e;
+  --simpledark-red-700: #c53030;
+  --simpledark-red-800: #9b2c2c;
+  --simpledark-red-900: #742a2a;
   --simpledark-black: 9, 11, 15;
   --simpledark-white: 255, 255, 255;
 
-  /* Background */
-  /* see index.ts */
+  /* Background  see index.ts */
 
-  /* Main menu bar */
-  /* see index.ts */
+  /* Main menu bar see index.ts */
 
-  /* Layout color */
-  /* see index.ts */
+  /* Layout color see index.ts */
 
-  /* Scrollbar */
-  /* see index.ts */
+  /* Scrollbar see index.css */
 
   /* Notebook */
-  --max-cell-width: "1024px";
+
+  --max-cell-width: '1024px';
 
   /* -- Pre-existing variables as defined by JupyterLab -- */
+
   /* Elevation
    *
    * We style box-shadows using Material Design's idea of elevation. These particular numbers are taken from here:
@@ -148,18 +132,24 @@ all of MD as it is not optimized for dense, information rich UIs.
    */
 
   --jp-shadow-base-lightness: 0;
-  --jp-shadow-umbra-color: rgba(var(--jp-shadow-base-lightness),
-      var(--jp-shadow-base-lightness),
-      var(--jp-shadow-base-lightness),
-      0.2);
-  --jp-shadow-penumbra-color: rgba(var(--jp-shadow-base-lightness),
-      var(--jp-shadow-base-lightness),
-      var(--jp-shadow-base-lightness),
-      0.14);
-  --jp-shadow-ambient-color: rgba(var(--jp-shadow-base-lightness),
-      var(--jp-shadow-base-lightness),
-      var(--jp-shadow-base-lightness),
-      0.12);
+  --jp-shadow-umbra-color: rgba(
+    var(--jp-shadow-base-lightness),
+    var(--jp-shadow-base-lightness),
+    var(--jp-shadow-base-lightness),
+    0.2
+  );
+  --jp-shadow-penumbra-color: rgba(
+    var(--jp-shadow-base-lightness),
+    var(--jp-shadow-base-lightness),
+    var(--jp-shadow-base-lightness),
+    0.14
+  );
+  --jp-shadow-ambient-color: rgba(
+    var(--jp-shadow-base-lightness),
+    var(--jp-shadow-base-lightness),
+    var(--jp-shadow-base-lightness),
+    0.12
+  );
   --jp-elevation-z0: none;
   --jp-elevation-z1: 0px 2px 1px -1px var(--jp-shadow-umbra-color),
     0px 1px 1px 0px var(--jp-shadow-penumbra-color),
@@ -208,14 +198,14 @@ all of MD as it is not optimized for dense, information rich UIs.
    */
 
   --jp-ui-font-scale-factor: 1.2;
-  --jp-ui-font-size0: 0.83333em;
+  --jp-ui-font-size0: 0.8333em;
   --jp-ui-font-size1: 13px;
+
   /* Base font size */
   --jp-ui-font-size2: 1.2em;
   --jp-ui-font-size3: 1.44em;
-
-  --jp-ui-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
-    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --jp-ui-font-family: -apple-system, blinkmacsystemfont, 'Segoe UI', helvetica,
+    arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
   /*
    * Use these font colors against the corresponding main layout colors.
@@ -249,8 +239,9 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   --jp-content-line-height: 1.6;
   --jp-content-font-scale-factor: 1.2;
-  --jp-content-font-size0: 0.83333em;
+  --jp-content-font-size0: 0.833em;
   --jp-content-font-size1: 14px;
+
   /* Base font size */
   --jp-content-font-size2: 1.2em;
   --jp-content-font-size3: 1.44em;
@@ -259,7 +250,6 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /* This gives a magnification of about 125% in presentation mode over normal. */
   --jp-content-presentation-font-size1: 17px;
-
   --jp-content-heading-line-height: 1;
   --jp-content-heading-margin-top: 1.2em;
   --jp-content-heading-margin-bottom: 0.8em;
@@ -270,11 +260,9 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-content-font-color1: rgba(var(--simpledark-base-font-color), 0.87);
   --jp-content-font-color2: rgba(var(--simpledark-base-font-color), 0.54);
   --jp-content-font-color3: rgba(var(--simpledark-base-font-color), 0.38);
-
   --jp-content-link-color: var(--simpledark-blue-700);
-
-  --jp-content-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  --jp-content-font-family: -apple-system, blinkbacsystemfont, 'Segoe UI',
+    helvetica, arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
 
   /*
@@ -285,9 +273,10 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   --jp-code-font-size: 13px;
   --jp-code-line-height: 1.3077;
+
   /* 17px for 13px base */
   --jp-code-padding: 8px;
-  --jp-code-font-family-default: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  --jp-code-font-family-default: menlo, consolas, 'DejaVu Sans Mono', monospace;
   --jp-code-font-family: var(--jp-code-font-family-default);
 
   /* This gives a magnification of about 125% in presentation mode over normal. */
@@ -318,24 +307,20 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-icon-search-case-sensitive: url("data:image/svg+xml,%3C?xml version='1.0' encoding='utf-8'?%3E %3C!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20 20' style='enable-background:new 0 0 20 20;' xml:space='preserve'%3E %3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D .st1%7Bfill:%23414141;%7D .st2%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cg%3E %3Crect class='st0' width='20' height='20'/%3E %3Crect x='2' y='2' class='st1' width='16' height='16'/%3E %3Cpath class='st2' d='M7.6,8h0.9l3.5,8h-1.1L10,14H6l-0.9,2H4L7.6,8z M8,9.1L6.4,13h3.2L8,9.1z'/%3E %3Cpath class='st2' d='M16.6,9.8c-0.2,0.1-0.4,0.1-0.7,0.1c-0.2,0-0.4-0.1-0.6-0.2c-0.1-0.1-0.2-0.4-0.2-0.7 c-0.3,0.3-0.6,0.5-0.9,0.7c-0.3,0.1-0.7,0.2-1.1,0.2c-0.3,0-0.5,0-0.7-0.1c-0.2-0.1-0.4-0.2-0.6-0.3c-0.2-0.1-0.3-0.3-0.4-0.5 c-0.1-0.2-0.1-0.4-0.1-0.7c0-0.3,0.1-0.6,0.2-0.8c0.1-0.2,0.3-0.4,0.4-0.5C12,7,12.2,6.9,12.5,6.8c0.2-0.1,0.5-0.1,0.7-0.2 c0.3-0.1,0.5-0.1,0.7-0.1c0.2,0,0.4-0.1,0.6-0.1c0.2,0,0.3-0.1,0.4-0.2c0.1-0.1,0.2-0.2,0.2-0.4c0-1-1.1-1-1.3-1 c-0.4,0-1.4,0-1.4,1.2h-0.9c0-0.4,0.1-0.7,0.2-1c0.1-0.2,0.3-0.4,0.5-0.6c0.2-0.2,0.5-0.3,0.8-0.3C13.3,4,13.6,4,13.9,4 c0.3,0,0.5,0,0.8,0.1c0.3,0,0.5,0.1,0.7,0.2c0.2,0.1,0.4,0.3,0.5,0.5C16,5,16,5.2,16,5.6v2.9c0,0.2,0,0.4,0,0.5 c0,0.1,0.1,0.2,0.3,0.2c0.1,0,0.2,0,0.3,0V9.8z M15.2,6.9c-1.2,0.6-3.1,0.2-3.1,1.4c0,1.4,3.1,1,3.1-0.5V6.9z'/%3E %3C/g%3E %3C/svg%3E");
   --jp-icon-search-regex: url("data:image/svg+xml,%3C?xml version='1.0' encoding='utf-8'?%3E %3C!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20 20' style='enable-background:new 0 0 20 20;' xml:space='preserve'%3E %3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D .st1%7Bfill:%23414141;%7D .st2%7Bfill:%23FFFFFF;%7D %3C/style%3E %3Cg id='Regex_Icon_2_'%3E %3Crect class='st0' width='20' height='20'/%3E %3Crect x='2' y='2' class='st1' width='16' height='16'/%3E %3Ccircle class='st2' cx='5.5' cy='14.5' r='1.5'/%3E %3Cg%3E %3Crect x='12' y='4' class='st2' width='1' height='8'/%3E %3Crect x='8.5' y='7.5' transform='matrix(0.866 -0.5 0.5 0.866 -2.3255 7.3219)' class='st2' width='8' height='1'/%3E %3Crect x='12' y='4' transform='matrix(0.5 -0.866 0.866 0.5 -0.6779 14.8252)' class='st2' width='1' height='8'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 
-  /* Brand/accent */
-  /* see index.ts */
+  /* Brand/accent see index.ts */
 
-  /* State colors (warn, error, success, info) */
-  /* see index.ts */
+  /* State colors (warn, error, success, info) see index.ts */
 
   /* Cell specific styles */
   --jp-cell-padding: 5px;
   --jp-cell-collapser-width: 4px;
   --jp-cell-collapser-min-height: 20px;
   --jp-cell-collapser-not-active-hover-opacity: 0.6;
-
   --jp-cell-editor-background: var(--simpledark-code-cell-color);
   --jp-cell-editor-border-color: transparent;
   --jp-cell-editor-box-shadow: inset 0 0 2px var(--simpledark-blue-300);
   --jp-cell-editor-active-background: var(--simpledark-code-cell-color);
   --jp-cell-editor-active-border-color: var(--jp-brand-color1);
-
   --jp-cell-prompt-width: 64px;
   --jp-cell-prompt-font-family: 'Source Code Pro', monospace;
   --jp-cell-prompt-letter-spacing: 0px;
@@ -344,6 +329,7 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-cell-prompt-not-active-font-color: var(--jp-content-font-color2);
 
   /* Notebook specific styles */
+
   /* see index.ts */
   --jp-notebook-padding: 10px;
 
@@ -353,9 +339,13 @@ all of MD as it is not optimized for dense, information rich UIs.
   pixel so that no scrollbar appears if we have just one single-line cell in the
   notebook. This padding is to enable a 'scroll past end' feature in a notebook.
   */
-  --jp-notebook-scroll-padding: calc(100% - var(--jp-code-font-size) * var(--jp-code-line-height) - var(--jp-code-padding) - var(--jp-cell-padding) - 1px);
+  --jp-notebook-scroll-padding: calc(
+    100% - var(--jp-code-font-size) * var(--jp-code-line-height) -
+      var(--jp-code-padding) - var(--jp-cell-padding) - 1px
+  );
 
   /* Rendermime styles */
+
   /* see index.ts */
 
   /* Dialog specific styles */
@@ -368,7 +358,8 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-toolbar-border-color: transparent;
   --jp-toolbar-micro-height: 8px;
   --jp-toolbar-background: transparent;
-  --jp-toolbar-box-shadow: 0px 0px 2px 0px rgba(var(--simpledark-base-font-color), 0.24);
+  --jp-toolbar-box-shadow: 0px 0px 2px 0px
+    rgba(var(--simpledark-base-font-color), 0.24);
   --jp-toolbar-header-margin: 4px 4px 0px 4px;
   --jp-toolbar-active-background: var(--simpledark-grey-300);
 
@@ -381,9 +372,11 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-input-active-border-color: var(--jp-brand-color1);
 
   /* General editor styles */
+
   /* see index.ts */
 
   /* Code mirror specific styles */
+
   /* see index.ts */
 
   /* Vega extension styles */
