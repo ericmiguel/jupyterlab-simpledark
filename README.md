@@ -1,78 +1,83 @@
-# Simpledark
 
-[![PyPI version](https://badge.fury.io/py/jupyterlab-simpledark.svg)](https://badge.fury.io/py/jupyterlab-simpledark)
+# jupyterlab Simpledark
 
-A (growing) dark theme collection for [JupyterLab](https://jupyter.org/).
+[![Package version](https://img.shields.io/pypi/v/jupyterlab-simpledark?color=%2334D058&label=pypi%20package)](https://pypi.org/project/jupyterlab-simpledark)
+[![Supported Python versions](https://img.shields.io/pypi/pyversions/jupyterlab-simpledark.svg?color=%2334D058)](https://pypi.org/project/jupyterlab-simpledark)
+[![Github Actions Status](https://github.com/ericmiguel/jupyterlab-simpledark/workflows/Build/badge.svg)](https://github.com/ericmiguel/jupyterlab-simpledark/actions/workflows/build.yml)  
 
-Simpledark original          |  Simpledark fresh  (new 🎉)
-:-------------------------:|:-------------------------:
-![original](https://raw.githubusercontent.com/ericmiguel/jupyterlab-simpledark/v1.0.0/examples/original1.png)  |  ![fresh](https://raw.githubusercontent.com/ericmiguel/jupyterlab-simpledark/v1.0.0/examples/fresh1.png)
+A (growing) dark theme collection for JupyterLab.
 
-## 🔧 Configurations
+## Previews
 
-What about a nostalgic Jupyter Notebook layout? Set a cell max-width.
+### Simpledark Original
 
-```settings``` -> ```advanced settings editor``` -> ```theme - Simpledark```
+![original](https://raw.githubusercontent.com/ericmiguel/jupyterlab-simpledark/v1.0.0/examples/original1.png)
 
-```json
-{
-    "maxCellWidth": "1024px"
-}
-```
+### Simpledark Fresh
 
-![original](https://raw.githubusercontent.com/ericmiguel/jupyterlab-simpledark/v1.0.0/examples/original2.png)
+![fresh](https://raw.githubusercontent.com/ericmiguel/jupyterlab-simpledark/v1.0.0/examples/fresh1.png)
 
-## ⚠️ Requirements
 
-* JupyterLab >= 3.0
+## Requirements
 
-## 💿 Install
+- JupyterLab >= 4.0.0
 
-The source code is currently hosted on GitHub at: https://github.com/ericmiguel/jupyterlab-simpledark.
+## Install
 
-Installers for the latest released version are available at the [PyPI](https://pypi.org/project/jupyterlab-simpledark).
+To install the extension, execute:
 
 ```bash
 pip install jupyterlab-simpledark
 ```
 
-To uninstall, run:
+## Contributing
+
+### Development install
+
+Note: You will need NodeJS to build the extension package.
+
+The `jlpm` command is JupyterLab's pinned version of
+[yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use
+`yarn` or `npm` in lieu of `jlpm` below.
+
+```bash
+# Clone the repo to your local environment
+# Change directory to the jupyterlab-simpledark directory
+# Install package in development mode
+pip install -e "."
+# Link your development version of the extension with JupyterLab
+jupyter labextension develop . --overwrite
+# Rebuild extension Typescript source after making changes
+jlpm build
+```
+
+You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension.
+
+```bash
+# Watch the source directory in one terminal, automatically rebuilding when needed
+jlpm watch
+# Run JupyterLab in another terminal
+jupyter lab
+```
+
+With the watch command running, every saved change will immediately be built locally and available in your running JupyterLab. Refresh JupyterLab to load the change in your browser (you may need to wait several seconds for the extension to be rebuilt).
+
+By default, the `jlpm build` command generates the source maps for this extension to make it easier to debug using the browser dev tools. To also generate source maps for the JupyterLab core extensions, you can run the following command:
+
+```bash
+jupyter lab build --minimize=False
+```
+
+### Development uninstall
 
 ```bash
 pip uninstall jupyterlab-simpledark
 ```
 
-## 🔨 Contributing
+In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
+command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
+folder is located. Then you can remove the symlink named `jupyterlab-simpledark` within that folder.
 
-### Development install
+### Packaging the extension
 
-For a development install, run the following commands in the repository directory:
-
-```bash
-npm install                   # install npm package dependencies
-npm run build                 # optional build step if using TypeScript, babel, etc.
-jupyter labextension install  # install the current directory as an extension
-```
-
-For incremental builds use:
-
-```bash
-jupyter lab --watch
-```
-
-To rebuild the package and the JupyterLab app:
-
-```bash
-npm run build
-jupyter lab build
-```
-
-See also JupyterLab's documentation [Development workflow for source extensions](https://jupyterlab.readthedocs.io/en/stable/extension/extension_dev.html#development-workflow-for-source-extensions).
-
-## 👷 Maintainer
-
-[![Eric Miguel](https://avatars1.githubusercontent.com/u/12076399?s=70)](https://github.com/ericmiguel)
-
-## 📜 License
-
-[MIT License](./LICENSE)
+See [RELEASE](RELEASE.md)

@@ -1,0 +1,19 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.2.5
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: eric.mrib@gmail.com
+author_name: Eric Miguel
+data_format: string
+file_extension: ''
+has_binder: false
+has_settings: false
+kind: theme
+labextension_name: jupyterlab-simpledark
+mimetype: ''
+mimetype_name: ''
+project_short_description: A (growing) dark theme collection for JupyterLab.
+python_name: jupyterlab-simpledark
+repository: https://github.com/ericmiguel/jupyterlab-simpledark
+test: false
+viewer_name: ''
+
