@@ -1,6 +1,6 @@
 {
     "name": "jupyterlab-simpledark",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A (growing) dark theme collection for JupyterLab.",
     "keywords": [
         "jupyter",
