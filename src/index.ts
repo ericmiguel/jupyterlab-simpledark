@@ -4,33 +4,21 @@ import {
 } from '@jupyterlab/application';
 
 import { IThemeManager } from '@jupyterlab/apputils';
-import { ISettingRegistry } from '@jupyterlab/settingregistry';
-
-const extensionId = 'jupyterlab-simpledark:plugin';
 
 /**
- * A plugin for jupyterlab-simpledark
- * Since the JupyterLab theme extension seem to only allow for one index.css file, there is a set of variables
- * defined in index.css which is overridden here depending of the choice of theme.
+ * Initialization data for the jupyterlab-simpledark extension.
  */
 const plugin: JupyterFrontEndPlugin<void> = {
-  id: extensionId,
-  requires: [IThemeManager, ISettingRegistry],
-  activate: function (app: JupyterFrontEnd, manager: IThemeManager, settingRegistry: ISettingRegistry,) {
+  id: 'jupyterlab-simpledark:plugin',
+  description: 'A (growing) dark theme collection for JupyterLab.',
+  autoStart: true,
+  requires: [IThemeManager],
+  activate: (app: JupyterFrontEnd, manager: IThemeManager) => {
+    console.log('JupyterLab extension jupyterlab-simpledark is activated!');
     const style = 'jupyterlab-simpledark/index.css';
-    let width = "";
-
-    // Load settings
-    Promise.all([
-      settingRegistry.load(extensionId),
-      app.restored
-    ]).then(async ([settings]) => {
-      width = settings.get('maxCellWidth').composite.toString();
-      document.documentElement.style.setProperty('--max-cell-width', width);
-    });
 
     manager.register({
-      name: 'Simpledark fresh',
+      name: 'Simpledark Fresh',
       isLight: false,
       load: () => {
 
@@ -50,7 +38,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
         document.documentElement.style.setProperty('--jp-layout-color0', 'var(--simpledark-grey-900)');
         document.documentElement.style.setProperty('--jp-layout-color1', 'var(--simpledark-grey-900)');
         document.documentElement.style.setProperty('--jp-layout-color2', 'var(--simpledark-grey-950)');
-        document.documentElement.style.setProperty('--jp-layout-color3', 'var(--simpledark-grey-300)');
+        document.documentElement.style.setProperty('--jp-layout-color3', 'var(--simpledark-grey-950)');
         document.documentElement.style.setProperty('--jp-layout-color4', 'var(--simpledark-grey-400)');
 
         document.documentElement.style.setProperty('--jp-inverse-layout-color0', 'var(--simpledark-green-400)');
@@ -87,10 +75,10 @@ const plugin: JupyterFrontEndPlugin<void> = {
         document.documentElement.style.setProperty('--jp-info-color2', 'var(--simpledark-blue-500)');
         document.documentElement.style.setProperty('--jp-info-color3', 'var(--simpledark-blue-400)');
 
-        document.documentElement.style.setProperty('--jp-warn-color0', 'var(--simpledark-orange-500)');
-        document.documentElement.style.setProperty('--jp-warn-color1', 'var(--simpledark-orange-500)');
-        document.documentElement.style.setProperty('--jp-warn-color2', 'var(--simpledark-orange-500)');
-        document.documentElement.style.setProperty('--jp-warn-color3', 'var(--simpledark-orange-500)');
+        document.documentElement.style.setProperty('--jp-warn-color0', 'var(--simpledark-green-500)');
+        document.documentElement.style.setProperty('--jp-warn-color1', 'var(--simpledark-green-500)');
+        document.documentElement.style.setProperty('--jp-warn-color2', 'var(--simpledark-green-500)');
+        document.documentElement.style.setProperty('--jp-warn-color3', 'var(--simpledark-green-500)');
 
         document.documentElement.style.setProperty('--jp-error-color0', 'var(--simpledark-red-700)');
         document.documentElement.style.setProperty('--jp-error-color1', 'var(--simpledark-red-500)');
@@ -103,7 +91,8 @@ const plugin: JupyterFrontEndPlugin<void> = {
         document.documentElement.style.setProperty('--jp-success-color3', 'var(--simpledark-green-100)');
 
         // Scrollbar color
-        document.documentElement.style.setProperty('--simpledark-scrollbar-thumb-color', 'var(--simpledark-grey-700)');
+        document.documentElement.style.setProperty('--simpledark-scrollbar-track-color', 'var(--simpledark-grey-700)');
+        document.documentElement.style.setProperty('--simpledark-scrollbar-thumb-color', 'var(--simpledark-grey-900)');
 
         // Editor colors
         document.documentElement.style.setProperty('--jp-mirror-editor-keyword-color', 'var(--simpledark-green-500)');
@@ -147,6 +136,9 @@ const plugin: JupyterFrontEndPlugin<void> = {
         document.documentElement.style.setProperty('--jp-rendermime-table-row-background', 'var(--simpledark-grey-600)');
         document.documentElement.style.setProperty('--jp-rendermime-table-row-hover-background', 'var(--simpledark-orange-200)');
         document.documentElement.style.setProperty('--jp-rendermime-error-background', '#151524');
+
+        // Icon styles
+        document.documentElement.style.setProperty('--jp-icon-contrast-color0', 'var(--simpledark-green-500)')
         
 
         return manager.loadCSS(style)
@@ -155,7 +147,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     });
 
     manager.register({
-      name: 'Simpledark original',
+      name: 'Simpledark Original',
       isLight: false,
       load: () => {
 
@@ -182,7 +174,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
         document.documentElement.style.setProperty('--jp-layout-color0', 'var(--simpledark-layout-color0)');
         document.documentElement.style.setProperty('--jp-layout-color1', 'var(--simpledark-layout-color0)');
         document.documentElement.style.setProperty('--jp-layout-color2', 'var(--simpledark-black-600)');
-        document.documentElement.style.setProperty('--jp-layout-color3', 'var(--simpledark-orange-300)');
+        document.documentElement.style.setProperty('--jp-layout-color3', 'var(--simpledark-black-500)');
         document.documentElement.style.setProperty('--jp-layout-color4', 'var(--simpledark-layout-color0)');
 
         document.documentElement.style.setProperty('--jp-inverse-layout-color0', 'var(--simpledark-orange-300)');
@@ -235,7 +227,8 @@ const plugin: JupyterFrontEndPlugin<void> = {
         document.documentElement.style.setProperty('--jp-success-color3', 'var(--simpledark-green-100)');
 
         // Scrollbar color
-        document.documentElement.style.setProperty('--simpledark-scrollbar-thumb-color', 'var(--simpledark-black-700)');
+        document.documentElement.style.setProperty('--simpledark-scrollbar-track-color', 'var(--simpledark-black-700)');
+        document.documentElement.style.setProperty('--simpledark-scrollbar-thumb-color', 'var(--simpledark-black-500)');
 
         // Editor colors
         document.documentElement.style.setProperty('--jp-mirror-editor-keyword-color', '#F28C18');
@@ -281,14 +274,15 @@ const plugin: JupyterFrontEndPlugin<void> = {
         document.documentElement.style.setProperty('--jp-notebook-select-background', '#1F1F36');
         document.documentElement.style.setProperty('--jp-notebook-multiselected-color', '#1F1F36');
 
+        // Icon styles
+        document.documentElement.style.setProperty('--jp-icon-contrast-color0', 'var(--simpledark-orange-500)')
+
         return manager.loadCSS(style)
 
       },
       unload: () => Promise.resolve(undefined)
     });
-
-  },
-  autoStart: true
+  }
 };
 
 export default plugin;

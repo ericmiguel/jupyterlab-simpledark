@@ -292,27 +292,24 @@ button.jp-Button.bp3-button.bp3-minimal:hover {
 }
 
 /* Scrollbar */
-div,
-ul {
-  /* Currently only supported in Firefox */
+
+/* Firefox */
+* {
+  scrollbar-width: auto;
   scrollbar-color: var(--simpledark-scrollbar-thumb-color) var(--simpledark-scrollbar-track-color);
 }
 
-div::-webkit-scrollbar,
-ul::-webkit-scrollbar {
-  background-color: var(--simpledark-scrollbar-track-color);
-  border-radius: var(--jp-border-radius);
-  width: 12px;
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 60px;
 }
 
-div::-webkit-scrollbar-track,
-ul::-webkit-scrollbar-track {
-  background-color: var(--simpledark-scrollbar-track-color);
-  border-radius: var(--jp-border-radius);
+*::-webkit-scrollbar-track {
+  background: var(--simpledark-scrollbar-track-color);
 }
 
-div::-webkit-scrollbar-thumb,
-ul::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background-color: var(--simpledark-scrollbar-thumb-color);
   border-radius: var(--jp-border-radius);
 }
+
