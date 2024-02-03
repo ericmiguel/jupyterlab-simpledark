@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-simpledark",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "A (growing) dark theme collection for JupyterLab.",
   "keywords": [
     "jupyter",
@@ -92,7 +92,7 @@
     "outputDir": "jupyterlab-simpledark/labextension",
     "themePath": "style/index.css",
     "_build": {
-      "load": "static/remoteEntry.3fd53130e38e48919a26.js",
+      "load": "static/remoteEntry.e52d5f5d3a160d226048.js",
       "extension": "./extension"
     }
   },
